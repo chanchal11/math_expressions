@@ -8,11 +8,17 @@ def is_in_operator_list(character: str):
             return True
     return False
 
+def refine_input(input_str: str):
+    input_str.replace(" ", "")
+    input_str.replace(",", "")
+    return input_str
+
 def infix_to_postfix(infix_exp : str):
+
+    infix_exp = refine_input(infix_exp)
     postfix_stack = list()
     syntax_stack = list()
-    
-    
+        
     def process_alpha_str():
         global temp_number_str
         if not temp_number_str.__len__() == 0:         
