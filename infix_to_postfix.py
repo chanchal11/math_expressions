@@ -40,6 +40,9 @@ def infix_to_postfix(infix_exp : str):
                 else:
                     postfix_stack.append(syntax_stack.pop())
                     syntax_stack.append(character)
+            elif precidence_map[character] > precidence_map[syntax_stack[syntax_stack.__len__() -1]]:
+                syntax_stack.append(character)
+
         elif character.startswith('('):
             process_alpha_str()
             syntax_stack.append(character)
