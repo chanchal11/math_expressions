@@ -22,8 +22,8 @@ def evaluate_postfix(postfix_exp : list):
             temp_stack.append(element)
 
         elif inf_psfx.is_in_operator_list(element):
-            operand1 = temp_stack.pop()
             operand2 = temp_stack.pop()
+            operand1 = temp_stack.pop()
             temp_stack.append(calculate(operand1,operand2,element))
 
     return temp_stack[0]

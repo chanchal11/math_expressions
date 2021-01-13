@@ -63,4 +63,3 @@ def infix_to_postfix(infix_exp : str):
         postfix_stack.append(syntax_stack.pop())
     return postfix_stack
 
-print(infix_to_postfix(input('Enter a mathematical expression:')))
