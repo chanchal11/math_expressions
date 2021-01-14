@@ -28,4 +28,3 @@ def evaluate_postfix(postfix_exp : list):
 
     return temp_stack[0]
 
-print(evaluate_postfix(inf_psfx.infix_to_postfix(input('Enter a mathematical expression:'))))        
